@@ -11,10 +11,10 @@ class Task extends EventEmitter{
         this._execution = execution;
     }
 
-    execute(now, scheduledTask) { // :Andri
+    execute(now, scheduledTask) {
         let exec;
         try {
-            exec = this._execution({now: now, task: scheduledTask}); // :Andri
+            exec = this._execution({now: now, task: scheduledTask});
         } catch (error) {
             return this.emit('task-failed', error);
         }
